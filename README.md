@@ -3,6 +3,25 @@ simple-rackspace-api
 
 a simple interface to get access to services exposed in a cloud provided by www.rackspace.com
 
+The official API provided by rackspace is here: 
+
+	https://github.com/rackspace/php-opencloud
+
+The official API Reference is located here:
+
+	http://docs.rackspace.com/queues/api/v1.0/cq-devguide/content/overview.html
+
+I know rackspace guys has their own well know API, but in my opinion it force
+me to use php namespaces and the whole set of functions. In some cases
+(like mine) the API provided by rackspace is overhelming my needs, so 
+i decide to create a simple RETS api (CURL based) to interact with a
+Rackspace Cloud API system.
+
+The authentication is made by keeping in cache a copy of an Access Token
+granted by rackspace, when cache expires or when the access expires then
+a new access token is requested to rackspace.
+
+
 ```
 	Model:
 
